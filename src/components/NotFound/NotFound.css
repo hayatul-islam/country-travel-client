@@ -1,0 +1,12 @@
+.not-found .error-type{
+    font-size: 110px;
+    font-weight: 400;
+    letter-spacing: 14px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.not-found .error-text{
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-top: -20px;
+}

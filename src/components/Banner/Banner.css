@@ -1,0 +1,11 @@
+.banner {
+    height: 500px;
+    background-image: url('http://www.greenleafeco-tourism.com/wp-content/uploads/2015/06/Jaflong-Sylhet.jpg');
+    background-position: fixed;
+    
+}
+.banner p{
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: 300;
+}

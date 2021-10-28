@@ -1,0 +1,13 @@
+nav a{
+    text-decoration: none;
+    padding: 0 10px;
+    color: white;
+}
+nav a:hover{
+    color:white;
+    font-weight: bold;
+}
+.selected{
+    color: white;
+    font-weight: bold;
+}
