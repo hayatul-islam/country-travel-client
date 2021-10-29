@@ -1,0 +1,15 @@
+.message-btn{
+    padding: 10px 20px;
+    background-color: #ddd;
+    margin-top: 40px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    border:1px solid gray;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.message-btn:hover{
+    border: 1px solid red;
+    color: red;
+}

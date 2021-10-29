@@ -6,34 +6,51 @@ import Header from './components/Header/Header';
 import NotFound from './components/NotFound/NotFound';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
+import Login from './components/Login/Login';
+import { AuthProvider } from './context/AuthProvider';
+import TravelBooking from './components/TravelBooking/TravelBooking';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Header />
-        <Switch>
+    // <AuthProvider>
+    <Router>
+      <Header />
+      <Switch>
 
-          <Route exact path="/">
-            <Home />
-          </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
 
-          <Route exact path="/home">
-            <Home />
-          </Route>
+        <Route exact path="/home">
+          <Home />
+        </Route>
 
-          <Route exact path="/about">
-            <About />
-          </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
 
-          <Route exact path="*">
-            <NotFound />
-          </Route>
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
 
-        </Switch>
-        <Footer />
-      </Router>
-    </div>
+        <Route path="/travelBooking">
+          <TravelBooking />
+        </Route>
+
+        <Route exact path="/login">
+          <Login />
+        </Route>
+
+        <Route exact path="*">
+          <NotFound />
+        </Route>
+
+      </Switch>
+      <Footer />
+    </Router>
+    // </AuthProvider>
   );
 }
 
