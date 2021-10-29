@@ -12,8 +12,8 @@ const Travel = () => {
     }, []);
 
     const history = useHistory();
-    const travelBooking = () => {
-        history.push('/travelBooking')
+    const travelBooking = key => {
+        history.push(`/travelBooking/${key}`)
     }
     return (
         <div className="py-5">
@@ -24,7 +24,7 @@ const Travel = () => {
                 </div>
                 <Row xs={1} md={2} lg={3} className="g-4">
                     {
-                        travels.map(travel => <Col>
+                        travels.map(travel => <Col key={travel.key}>
                             <Card>
                                 <Card.Img variant="top" src={travel.img} />
                                 <Card.Body>
@@ -32,7 +32,7 @@ const Travel = () => {
                                     <Card.Text>
                                         {travel.description}
                                     </Card.Text>
-                                    <Button onClick={travelBooking} variant="danger">Travel Booking</Button>
+                                    <Button onClick={() => travelBooking(travel.key)} variant="danger">Travel Booking</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
