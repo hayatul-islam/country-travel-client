@@ -7,7 +7,7 @@ import './Header.css';
 const Header = () => {
 
     const { user, logOut } = useFirebase();
-
+    console.log(user);
     const handleLogOut = () => {
         logOut()
     }
@@ -28,6 +28,14 @@ const Header = () => {
                         <NavLink activeClassName="selected" to="/about">About</NavLink>
                         <NavLink activeClassName="selected" to="/contact">Contact</NavLink>
                     </Nav>
+                    {
+                        user?.email ?
+                            <div>
+                                <img style={{ width: "30px", height: "30px", borderRadius: "50%" }} src={user?.photoURL} alt="" />
+                                <span className="text-white px-2">{user?.displayName}</span>
+                            </div> : ''
+                    }
+
                     {user?.email ?
                         <button onClick={handleLogOut} className="btn btn-outline-light">log out</button> :
                         <NavLink className="btn btn-light" to="/login">Login</NavLink>

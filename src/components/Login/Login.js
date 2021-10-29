@@ -16,9 +16,12 @@ const Login = () => {
             })
     }
     return (
-        <div>
-            <h1>This is login</h1>
-            <button onClick={handleGoogle}>google</button>
+        <div className="py-5 my-5 d-flex justify-content-center align-items-center">
+            <div onClick={handleGoogle} className="btn-group py-5" role="group" aria-label="Basic outlined example">
+                <button className="fs-4 btn btn-outline-primary"><i class="fab fa-google"></i></button>
+                <button className="btn btn-primary btn-lg"> Sign in with Google</button>
+
+            </div>
         </div>
     );
 };
