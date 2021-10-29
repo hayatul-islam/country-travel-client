@@ -9,7 +9,7 @@ const Header = () => {
             <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
                 <Container>
                     <Navbar.Brand href="#home">
-                        Travel
+                        <img className="img-fluid w-25" src={'http://www.nicdarkthemes.com/themes/travel/wp/demo/intro/img/logos/logo-r.png'} alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

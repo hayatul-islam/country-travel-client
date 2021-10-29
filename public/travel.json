@@ -1,0 +1,62 @@
+[
+    {
+        "key": "101",
+        "name": "COLOMBIA",
+        "img": "http://unitravel.ancorathemes.com/wp-content/uploads/2016/12/service-1-740x402.jpg",
+        "description": "Colombia is ripe for discovery, and there is a little of everything: green valleys, golden beaches and snow-capped mountains, colonial fortresses.",
+        "price": "1200",
+        "travel-style": "ACTIVE",
+        "service-label": "STANDARD",
+        "trip-type": "SMALL GROUP"
+    },
+    {
+        "key": "102",
+        "name": "ARGENTINA",
+        "img": "http://unitravel.ancorathemes.com/wp-content/uploads/2016/12/service-2-740x402.jpg",
+        "description": "It has become cliché to say that Argentina is as much European as it is Latin; yet to arrive in Buenos Aires and discover this is actually true still surprises.",
+        "price": "960",
+        "travel-style": "ACTIVE",
+        "service-label": "STANDARD",
+        "trip-type": "SMALL GROUP"
+    },
+    {
+        "key": "103",
+        "name": "VIETNAM",
+        "img": "http://unitravel.ancorathemes.com/wp-content/uploads/2016/12/service-3-740x402.jpg",
+        "description": "But today, the Vietnamese are focused on rocketing into the future. In this new era of confident self-determination is one of palpable optimism.",
+        "price": "1500",
+        "travel-style": "ACTIVE",
+        "service-label": "STANDARD",
+        "trip-type": "SMALL GROUP"
+    },
+    {
+        "key": "104",
+        "name": "TANZANIA",
+        "img": "http://unitravel.ancorathemes.com/wp-content/uploads/2016/12/service-4-740x402.jpg",
+        "description": "One of the most popular tourist destinations in Africa, Tanzania is well-established as one of the best wildlife-viewing destinations in the world.",
+        "price": "2100",
+        "travel-style": "ACTIVE",
+        "service-label": "STANDARD",
+        "trip-type": "SMALL GROUP"
+    },
+    {
+        "key": "105",
+        "name": "MOROCCO",
+        "img": "http://unitravel.ancorathemes.com/wp-content/uploads/2016/12/service-5-740x402.jpg",
+        "description": "Morocco has variety and an exotic feel that has fascinated travellers since long before the modern traveller arrived. Morocco’s Amazing Diversity.",
+        "price": "1800",
+        "travel-style": "ACTIVE",
+        "service-label": "STANDARD",
+        "trip-type": "SMALL GROUP"
+    },
+    {
+        "key": "106",
+        "name": "ECUADOR",
+        "img": "http://unitravel.ancorathemes.com/wp-content/uploads/2016/12/service-6-740x402.jpg",
+        "description": "Compact and diverse, Ecuador is like a tasting menu for South America. There are Andean mountains, complete with glacial volcanoes.",
+        "price": "1400",
+        "travel-style": "ACTIVE",
+        "service-label": "STANDARD",
+        "trip-type": "SMALL GROUP"
+    }
+]
