@@ -1,15 +1,13 @@
 import { Redirect, Route } from "react-router";
 import useAuth from "../../hooks/useAuth";
-import useFirebase from "../../hooks/useFirebase";
 
 function PrivateRoute({ children, ...rest }) {
-    let { user } = useFirebase();
-    console.log(user);
+    let { user } = useAuth();
     return (
         <Route
             {...rest}
             render={({ location }) =>
-                user.email ? (
+                user?.email ? (
                     children
                 ) : (
                     <Redirect

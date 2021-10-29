@@ -7,50 +7,56 @@ import NotFound from './components/NotFound/NotFound';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
-import { AuthProvider } from './context/AuthProvider';
+import AuthProvider from './context/AuthProvider';
 import TravelBooking from './components/TravelBooking/TravelBooking';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Contact from './components/Contact/Contact';
+import BookNow from './components/BookNow/BookNow';
+
 
 function App() {
   return (
-    // <AuthProvider>
-    <Router>
-      <Header />
-      <Switch>
+    <AuthProvider>
+      <Router>
+        <Header />
+        <Switch>
 
-        <Route exact path="/">
-          <Home />
-        </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
 
-        <Route exact path="/home">
-          <Home />
-        </Route>
+          <Route exact path="/home">
+            <Home />
+          </Route>
 
-        <Route exact path="/about">
-          <About />
-        </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
 
-        <Route exact path="/contact">
-          <Contact />
-        </Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
 
-        <Route path="/travelBooking/:bookingId">
-          <TravelBooking />
-        </Route>
+          <PrivateRoute path="/travelBooking/:bookingId">
+            <TravelBooking />
+          </PrivateRoute>
 
-        <Route exact path="/login">
-          <Login />
-        </Route>
+          <Route path="/bookNow">
+            <BookNow />
+          </Route>
 
-        <Route exact path="*">
-          <NotFound />
-        </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
 
-      </Switch>
-      <Footer />
-    </Router>
-    // </AuthProvider>
+          <Route exact path="*">
+            <NotFound />
+          </Route>
+
+        </Switch>
+        <Footer />
+      </Router>
+    </AuthProvider>
   );
 }
 

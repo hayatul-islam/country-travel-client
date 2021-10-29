@@ -6,7 +6,7 @@ const Travel = () => {
     const [travels, setTravels] = useState([]);
 
     useEffect(() => {
-        fetch('/travel.json')
+        fetch('http://localhost:5050/travels')
             .then(res => res.json())
             .then(data => setTravels(data))
     }, []);

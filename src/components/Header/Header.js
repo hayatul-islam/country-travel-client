@@ -6,6 +6,13 @@ import './Header.css';
 
 const Header = () => {
 
+    const { user, logOut } = useFirebase();
+
+    const handleLogOut = () => {
+        logOut()
+    }
+
+
     return (
 
         <Navbar className="mt-3" bg="dark" variant="dark" expand="lg" sticky="top" >
@@ -21,7 +28,10 @@ const Header = () => {
                         <NavLink activeClassName="selected" to="/about">About</NavLink>
                         <NavLink activeClassName="selected" to="/contact">Contact</NavLink>
                     </Nav>
-                    <NavLink className="btn btn-outline-danger" to="/login">Login</NavLink>
+                    {user?.email ?
+                        <button onClick={handleLogOut} className="btn btn-outline-light">log out</button> :
+                        <NavLink className="btn btn-light" to="/login">Login</NavLink>
+                    }
                 </Navbar.Collapse>
             </Container>
         </Navbar>
