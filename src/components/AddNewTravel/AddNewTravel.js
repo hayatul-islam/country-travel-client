@@ -4,18 +4,19 @@ import { useForm } from "react-hook-form";
 
 const AddNewTravel = () => {
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
         axios.post('http://localhost:5050/addTravel', data)
-            .then(res => res.json())
             .then(result => {
-                console.log(result);
+                if (result.data.insertedId) {
+                    alert('Successfully added a new Travel.')
+                    reset();
+                }
             })
             .catch(error => {
                 console.log(error);
             })
-        console.log(data)
     };
 
     return (

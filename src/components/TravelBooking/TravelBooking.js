@@ -12,7 +12,7 @@ const TravelBooking = () => {
             .then(data => setTravels(data))
     }, []);
 
-    const booking = travels.find(book => book.key === bookingId);
+    const booking = travels.find(book => book._id === bookingId);
     const bookName = booking?.name;
 
     const history = useHistory()
