@@ -7,7 +7,6 @@ import './Header.css';
 const Header = () => {
 
     const { user, logOut } = useFirebase();
-    console.log(user);
     const handleLogOut = () => {
         logOut()
     }
@@ -24,9 +23,16 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto">
                         <NavLink activeClassName="selected" to="/home">Home</NavLink>
-                        <NavLink activeClassName="selected" to="/travel">Travel</NavLink>
+                        {/* <NavLink activeClassName="selected" to="/travel">Travel</NavLink> */}
                         <NavLink activeClassName="selected" to="/about">About</NavLink>
                         <NavLink activeClassName="selected" to="/contact">Contact</NavLink>
+                        {
+                            user?.email ? <>
+                                <NavLink activeClassName="selected" to="/myOrders">My Booking</NavLink>
+                                <NavLink activeClassName="selected" to="/manageOrders">Manage Booking</NavLink>
+                                <NavLink activeClassName="selected" to="/addNewTravel">Add New Travel</NavLink>
+                            </> : ''
+                        }
                     </Nav>
                     {
                         user?.email ?
