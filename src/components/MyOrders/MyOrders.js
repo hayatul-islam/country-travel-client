@@ -45,6 +45,7 @@ const MyOrders = () => {
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Booking</th>
                             <th>Phone</th>
                             <th>Address</th>
                             <th>Status</th>
@@ -58,9 +59,10 @@ const MyOrders = () => {
                                 <td>{index + 1}</td>
                                 <td>{order.name}</td>
                                 <td>{order.email}</td>
+                                <td>{order.bookName}</td>
                                 <td>{order.phone}</td>
                                 <td>{order.address}</td>
-                                <td>{order.status}</td>
+                                <td className="text-center">{order.status}</td>
                                 <td className="text-center text-danger fs-5"><i onClick={() => handleDelete(order._id)} class="far fa-trash-alt"></i></td>
                             </tr>
                             )

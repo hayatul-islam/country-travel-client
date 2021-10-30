@@ -43,7 +43,7 @@ function App() {
             <TravelBooking />
           </PrivateRoute>
 
-          <Route path="/bookNow">
+          <Route path="/bookNow/:bookName">
             <BookNow />
           </Route>
 

@@ -32,6 +32,14 @@ const ManageOrders = () => {
         }
     }
 
+    const handleStatusUpdate = id => {
+        const url = `http://localhost:5050/update/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify()
+        })
+    }
 
     return (
         <Container className="py-5">
@@ -41,6 +49,7 @@ const ManageOrders = () => {
                         <th>#</th>
                         <th>Name</th>
                         <th>Email</th>
+                        <th>Booking</th>
                         <th>Phone</th>
                         <th>Address</th>
                         <th>Status</th>
@@ -54,11 +63,18 @@ const ManageOrders = () => {
                             <td>{index + 1}</td>
                             <td>{order.name}</td>
                             <td>{order.email}</td>
+                            <td>{order.bookName}</td>
                             <td>{order.phone}</td>
                             <td>{order.address}</td>
-                            <td>
-                                <span className="bg-warning px-2 py-1 rounded">{order.status}</span>
-                            </td>
+                            {
+                                order.status === 'Panding' ?
+                                    <td className="text-center">
+                                        <span onClick={() => handleStatusUpdate(order._id)} className="bg-warning px-2 py-1 rounded">{order.status}</span>
+                                    </td> :
+                                    <td className="text-center">
+                                        <span onClick={() => handleStatusUpdate(order._id)} className="bg-primary px-2 text-white py-1 rounded">{order.status}</span>
+                                    </td>
+                            }
                             <td className="text-center text-danger fs-5"><i onClick={() => handleDelete(order._id)} class="far fa-trash-alt"></i></td>
                         </tr>
                         )

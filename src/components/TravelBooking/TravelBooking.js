@@ -13,10 +13,11 @@ const TravelBooking = () => {
     }, []);
 
     const booking = travels.find(book => book.key === bookingId);
+    const bookName = booking?.name;
 
     const history = useHistory()
     const bookNow = () => {
-        history.push('/bookNow')
+        history.push(`/bookNow/${bookName}`)
     }
 
     return (
