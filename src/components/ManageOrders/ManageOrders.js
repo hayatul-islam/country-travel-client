@@ -20,7 +20,6 @@ const ManageOrders = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
 
                     if (data.deletedCount) {
                         alert('Delete Successfully');
@@ -39,6 +38,13 @@ const ManageOrders = () => {
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify()
         })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    window.location.reload();
+                }
+            })
+
     }
 
     return (
