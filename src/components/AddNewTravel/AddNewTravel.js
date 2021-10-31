@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
+import './AddNewTravel.css';
 
 const AddNewTravel = () => {
 
@@ -20,11 +21,11 @@ const AddNewTravel = () => {
     };
 
     return (
-        <div>
+        <div className="newTravel">
             <div className="py-5 container">
                 <div className="row my-5">
                     <div className="col-lg-3"></div>
-                    <div className="col-lg-5 shadow px-4 py-5 rounded rounded-2">
+                    <div className="col-lg-5 shadow px-4 py-5 rounded rounded-2 bg-white">
                         <h1 className="text-center text-uppercase pb-4"><span className="text-danger">Add a new</span> Travel</h1>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input className="form-control" {...register("name", { required: true, maxLength: 20 })} placeholder="Country Name" /> <br />

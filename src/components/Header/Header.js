@@ -17,7 +17,7 @@ const Header = () => {
         <Navbar className="mt-3" bg="dark" variant="dark" expand="lg" sticky="top" >
             <Container>
                 <Navbar.Brand href="#home">
-                    <img className="header-menu" src={'http://www.nicdarkthemes.com/themes/travel/wp/demo/intro/img/logos/logo-r.png'} alt="" />
+                    <img className="header-menu" src={'https://i.ibb.co/3h4jyLK/logo-r.png'} alt="" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -27,15 +27,15 @@ const Header = () => {
                         <NavLink activeClassName="selected" to="/contact">Contact</NavLink>
                         {
                             user?.email ? <>
+                                <NavLink activeClassName="selected" to="/manageOrders">All Booking</NavLink>
                                 <NavLink activeClassName="selected" to="/myOrders">My Booking</NavLink>
-                                <NavLink activeClassName="selected" to="/manageOrders">Manage All Booking</NavLink>
                                 <NavLink activeClassName="selected" to="/addNewTravel">Add New Travel</NavLink>
                             </> : ''
                         }
                     </Nav>
                     {
                         user?.email ?
-                            <div>
+                            <div className="py-3">
                                 <img style={{ width: "30px", height: "30px", borderRadius: "50%" }} src={user?.photoURL} alt="" />
                                 <span className="text-white px-2">{user?.displayName}</span>
                             </div> : ''
