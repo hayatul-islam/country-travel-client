@@ -6,7 +6,7 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5050/allOrders')
+        fetch('https://infinite-fjord-91722.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, []);
@@ -18,7 +18,7 @@ const MyOrders = () => {
         if (confirm) {
 
 
-            fetch(`http://localhost:5050/delete/${id}`, {
+            fetch(`https://infinite-fjord-91722.herokuapp.com/delete/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -36,9 +36,10 @@ const MyOrders = () => {
     }
 
     return (
-        <div>
+        <div className="manage-order">
 
             <Container className="py-5">
+                <h2 className="text-center pb-4 text-uppercase text-danger"> My Booking </h2>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -46,7 +47,7 @@ const MyOrders = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Booking</th>
-                            <th>Phone</th>
+                            <th>Date</th>
                             <th>Address</th>
                             <th>Status</th>
                             <th>Action</th>
@@ -60,7 +61,7 @@ const MyOrders = () => {
                                 <td>{order.name}</td>
                                 <td>{order.email}</td>
                                 <td>{order.bookName}</td>
-                                <td>{order.phone}</td>
+                                <td>{order.date}</td>
                                 <td>{order.address}</td>
                                 <td className="text-center">{order.status}</td>
                                 <td className="text-center text-danger fs-5"><i onClick={() => handleDelete(order._id)} class="far fa-trash-alt"></i></td>

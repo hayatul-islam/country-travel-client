@@ -7,7 +7,7 @@ const TravelBooking = () => {
     const [travels, setTravels] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5050/travels')
+        fetch('https://infinite-fjord-91722.herokuapp.com/travels')
             .then(res => res.json())
             .then(data => setTravels(data))
     }, []);
@@ -24,7 +24,7 @@ const TravelBooking = () => {
         <div className="py-5">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-6 px-2">
+                    <div className="col-md-6 px-3 pb-4">
                         <small className="text-danger">Machu Picchu</small>
                         <h1 className="fw-bold">{booking?.name}</h1>
                         <p>{booking?.description}</p>

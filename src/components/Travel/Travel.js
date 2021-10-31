@@ -6,7 +6,7 @@ const Travel = () => {
     const [travels, setTravels] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5050/travels')
+        fetch('https://infinite-fjord-91722.herokuapp.com/travels')
             .then(res => res.json())
             .then(data => setTravels(data))
     }, []);

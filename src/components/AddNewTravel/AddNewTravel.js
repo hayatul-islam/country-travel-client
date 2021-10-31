@@ -7,7 +7,7 @@ const AddNewTravel = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        axios.post('http://localhost:5050/addTravel', data)
+        axios.post('https://infinite-fjord-91722.herokuapp.com/addTravel', data)
             .then(result => {
                 if (result.data.insertedId) {
                     alert('Successfully added a new Travel.')

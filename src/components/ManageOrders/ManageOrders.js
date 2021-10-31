@@ -1,11 +1,12 @@
 
 import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
+import './ManageOrder.css';
 
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5050/allOrders')
+        fetch('https://infinite-fjord-91722.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, []);
@@ -15,7 +16,7 @@ const ManageOrders = () => {
         if (confirm) {
 
 
-            fetch(`http://localhost:5050/delete/${id}`, {
+            fetch(`https://infinite-fjord-91722.herokuapp.com/delete/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -32,7 +33,7 @@ const ManageOrders = () => {
     }
 
     const handleStatusUpdate = id => {
-        const url = `http://localhost:5050/update/${id}`;
+        const url = `https://infinite-fjord-91722.herokuapp.com/update/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
@@ -48,47 +49,50 @@ const ManageOrders = () => {
     }
 
     return (
-        <Container className="py-5">
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Booking</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        orders.map((order, index) => <tr>
-
-                            <td>{index + 1}</td>
-                            <td>{order.name}</td>
-                            <td>{order.email}</td>
-                            <td>{order.bookName}</td>
-                            <td>{order.phone}</td>
-                            <td>{order.address}</td>
-                            {
-                                order.status === 'Panding' ?
-                                    <td className="text-center">
-                                        <span onClick={() => handleStatusUpdate(order._id)} className="bg-warning px-2 py-1 rounded">{order.status}</span>
-                                    </td> :
-                                    <td className="text-center">
-                                        <span onClick={() => handleStatusUpdate(order._id)} className="bg-primary px-2 text-white py-1 rounded">{order.status}</span>
-                                    </td>
-                            }
-                            <td className="text-center text-danger fs-5"><i onClick={() => handleDelete(order._id)} class="far fa-trash-alt"></i></td>
+        <div className="manage-order">
+            <Container className="py-5">
+                <h2 className="text-center pb-4 text-uppercase"><span className="text-danger">Booking</span> Details</h2>
+                <Table striped bordered hover>
+                    <thead>
+                        <tr className="bg-primary text-white">
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Booking</th>
+                            <th>Date</th>
+                            <th>Address</th>
+                            <th>Status</th>
+                            <th>Action</th>
                         </tr>
-                        )
-                    }
+                    </thead>
+                    <tbody>
+                        {
+                            orders.map((order, index) => <tr>
 
-                </tbody>
-            </Table>
-        </Container>
+                                <td>{index + 1}</td>
+                                <td>{order.name}</td>
+                                <td>{order.email}</td>
+                                <td>{order.bookName}</td>
+                                <td>{order.date}</td>
+                                <td>{order.address}</td>
+                                {
+                                    order.status === 'Panding' ?
+                                        <td className="text-center">
+                                            <span onClick={() => handleStatusUpdate(order._id)} className="bg-warning px-2 py-1 rounded">{order.status}</span>
+                                        </td> :
+                                        <td className="text-center">
+                                            <span onClick={() => handleStatusUpdate(order._id)} className="bg-primary px-2 text-white py-1 rounded">{order.status}</span>
+                                        </td>
+                                }
+                                <td className="text-center text-danger fs-5"><i onClick={() => handleDelete(order._id)} class="far fa-trash-alt"></i></td>
+                            </tr>
+                            )
+                        }
+
+                    </tbody>
+                </Table>
+            </Container>
+        </div>
     );
 };
 

@@ -13,7 +13,7 @@ const BookNow = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         data.status = 'Panding';
-        axios.post('http://localhost:5050/orders', data)
+        axios.post('https://infinite-fjord-91722.herokuapp.com/orders', data)
             .then(result => {
                 if (result.data.insertedId) {
                     alert('Welcome, your order Successfully!')
@@ -37,7 +37,7 @@ const BookNow = () => {
                                 <input className="form-control" defaultValue={user?.displayName} {...register("name", { required: true, maxLength: 20 })} /> <br />
                                 <input className="form-control" defaultValue={user?.email} {...register("email", { required: true })} /> <br />
                                 <input className="form-control" defaultValue={bookName} {...register("bookName", { required: true })} /> <br />
-                                <input className="form-control" type="date"  {...register("date")} /> <br />
+                                <input defaultValue={new Date().toDateString()} className="form-control"   {...register("date")} /> <br />
                                 <input className="form-control" type="number" {...register("phone")} placeholder="Your Phone" /> <br />
                                 <input className="form-control" {...register("address")} placeholder="Your address" /> <br />
                                 <input className="form-control bg-success text-white py-2" type="submit" />
