@@ -4,7 +4,7 @@ import './GoodReasons.css';
 
 const GoodReasons = () => {
     return (
-        <div className="py-5">
+        <div className="py-5 poppins-font">
             <div className="container">
                 <div className="text-center pb-3">
                     <h1>SOME <span className="text-danger">GOOD</span> REASONS</h1>
@@ -19,7 +19,7 @@ const GoodReasons = () => {
                             <Card.Body>
                                 <Card.Title> <span className="text-danger">+120</span> Premium tours</Card.Title>
                                 <Card.Text>
-                                    Premium Tours operates daily sightseeing tours from London.Our private viewings of top heritage sites allow
+                                    Premium Tours operates daily sightseeing tours from London.Our private viewings of heritage.
                                 </Card.Text>
                                 <button className="btn btn-outline-danger">Read more</button>
                             </Card.Body>

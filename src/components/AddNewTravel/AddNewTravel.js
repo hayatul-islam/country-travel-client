@@ -21,7 +21,7 @@ const AddNewTravel = () => {
     };
 
     return (
-        <div className="newTravel">
+        <div className="newTravel poppins-font">
             <div className="py-5 container">
                 <div className="row my-5">
                     <div className="col-lg-3"></div>

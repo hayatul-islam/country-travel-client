@@ -3,7 +3,7 @@ import './Contact.css';
 
 const Contact = () => {
     return (
-        <div>
+        <div className="poppins-font">
             <div className="container mt-5 py-5">
                 <div className="row mt-3">
                     <div className="col-md-8">

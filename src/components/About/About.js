@@ -4,7 +4,7 @@ import './About.css';
 
 const About = () => {
     return (
-        <div>
+        <div className="font-roboto">
             <>
                 <div>
                     <h1 className="text-center py-5">About Us</h1>

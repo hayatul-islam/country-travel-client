@@ -13,7 +13,7 @@ const Banner = () => {
         history.push('/contact')
     }
     return (
-        <div className="banner d-flex justify-content-center align-items-center">
+        <div className="banner d-flex justify-content-center align-items-center poppins-font">
             <div className="text-white fw-bold text-uppercase text-center">
                 <h1>TIME TO TRAVEL</h1>
                 <p>Enjoy Every moments</p>

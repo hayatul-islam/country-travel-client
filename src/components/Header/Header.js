@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
 
-        <Navbar className="mt-3" bg="dark" variant="dark" expand="lg" sticky="top" >
+        <Navbar className="mt-3 poppins-font" bg="dark" variant="dark" expand="lg" sticky="top" >
             <Container>
                 <Navbar.Brand href="#home">
                     <img className="header-menu" src={'https://i.ibb.co/3h4jyLK/logo-r.png'} alt="" />

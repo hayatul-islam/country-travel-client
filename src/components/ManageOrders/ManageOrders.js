@@ -49,7 +49,7 @@ const ManageOrders = () => {
     }
 
     return (
-        <div className="manage-order">
+        <div className="manage-order poppins-font">
             <Container className="py-5">
                 <h2 className="text-center pb-4 text-uppercase"><span className="text-danger">Booking</span> Details</h2>
                 <Table striped bordered hover>
@@ -81,7 +81,7 @@ const ManageOrders = () => {
                                             <span onClick={() => handleStatusUpdate(order._id)} className="bg-warning px-2 py-1 rounded">{order.status}</span>
                                         </td> :
                                         <td className="text-center">
-                                            <span onClick={() => handleStatusUpdate(order._id)} className="bg-primary px-2 text-white py-1 rounded">{order.status}</span>
+                                            <span onClick={() => handleStatusUpdate(order._id)} className="bg-success px-2 text-white py-1 rounded">{order.status}</span>
                                         </td>
                                 }
                                 <td className="text-center text-danger fs-5"><i onClick={() => handleDelete(order._id)} class="far fa-trash-alt"></i></td>

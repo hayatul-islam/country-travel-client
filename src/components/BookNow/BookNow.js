@@ -26,7 +26,7 @@ const BookNow = () => {
     };
 
     return (
-        <div className="book-now py-5">
+        <div className="book-now py-5 poppins-font">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3"></div>

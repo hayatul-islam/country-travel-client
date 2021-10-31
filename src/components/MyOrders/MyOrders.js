@@ -36,13 +36,13 @@ const MyOrders = () => {
     }
 
     return (
-        <div className="manage-order">
+        <div className="manage-order poppins-font">
 
             <Container className="py-5">
                 <h2 className="text-center pb-4 text-uppercase text-danger"> My Booking </h2>
                 <Table striped bordered hover>
                     <thead>
-                        <tr>
+                        <tr className="bg-primary text-white">
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
