@@ -15,6 +15,7 @@ import BookNow from './components/BookNow/BookNow';
 import MyOrders from './components/MyOrders/MyOrders';
 import ManageOrders from './components/ManageOrders/ManageOrders';
 import AddNewTravel from './components/AddNewTravel/AddNewTravel';
+import MainTravels from './components/MainTravels/MainTravels';
 
 
 function App() {
@@ -30,6 +31,10 @@ function App() {
 
           <Route exact path="/home">
             <Home />
+          </Route>
+
+          <Route exact path="/travels">
+            <MainTravels />
           </Route>
 
           <Route exact path="/about">

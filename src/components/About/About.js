@@ -11,7 +11,7 @@ const About = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-6">
-                                <img className="img-fluid about-img" src={'https://enchanting-costarica.com/wp-content/uploads/2017/10/Happiness-at-Playa-Nicuesa-Lodge.jpg'} alt="" />
+                                <img className="img-fluid w-100 about-img" src={'https://enchanting-costarica.com/wp-content/uploads/2017/10/Happiness-at-Playa-Nicuesa-Lodge.jpg'} alt="" />
                             </div>
                             <div className="col-md-6">
                                 <h5 className="text-danger mt-5">TIME TO TRAVEL</h5>
